@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://t.cn/hNYnP">
+<html xmlns="http://t.cn/RJPrzKG">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>校园网注册</title>
+</head>
+
+<body>
+<script>
+ function checkEmail()
+    {
+  var name=document.getElementById("txtUserName");
+  var result=document.getElementById("result");
+  var flag = name.checkValidity();
+  if(flag)
+  {
+   result.innerHTML="用户名格式正确";
+  }
+  else
+  {
+   result.innerHTML="用户名格式不正确";
+  }
+    }
+ </script>
+<form>
+ 
+ <fieldset>
+     <legend>
+         请输入注册信息
+        </legend>
+        <table>
+         <tr>
+             <td valign="top">
+                 用户名：
+                </td>
+                <td>
+                 <input type="text" id="txtUserName" onblur="checkEmail()" pattern="^[a-zA-Z0-9]{6,}$">
+                    <br>
+                    <span style="color: #096; font-size: 12px">只允许输入英文和数字，且长度至少为6位</span>
+                </td>
+            </tr>
+            <tr>
+             <td valign="top">
+                 电子邮箱：
+                </td>
+                <td>
+                 <input type="email" id="inputEmail" >
+                    
+                </td>
+            </tr>
+            <tr>
+             <td valign="top">
+                 学号：
+                </td>
+                <td>
+                 <input type="number" id="txtID"  >
+                </td>
+            </tr>
+             <tr>
+             <td colspan="2">
+                 <input type="reset" value="重置"  >
+                    <input type="submit" value="提交" >
+                 
+               
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
